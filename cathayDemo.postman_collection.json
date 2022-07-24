@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"code\": \"EUR\",\r\n    \"symbol\": \"&euro;\",\r\n    \"description\": \"Euro\",\r\n    \"currencyName\": \"歐元\"\r\n}",
+					"raw": "{\r\n    \"code\": \"TWD\",\r\n    \"symbol\": \"&twd;\",\r\n    \"description\": \"Taiwan Dollor\",\r\n    \"currencyName\": \"新台幣\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -176,6 +176,69 @@
 						"cathay",
 						"api",
 						"deleteAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRateFromUrl",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cathay/api/getRateFromUrl",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cathay",
+						"api",
+						"getRateFromUrl"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateBitCoinRate",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cathay/api/updateBitCoinRate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cathay",
+						"api",
+						"updateBitCoinRate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCurrencyInfoList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cathay/api/getCurrencyInfoList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cathay",
+						"api",
+						"getCurrencyInfoList"
 					]
 				}
 			},

@@ -1,6 +1,3 @@
-DROP TABLE IF EXISTS TEST;
-DROP TABLE IF EXISTS BITCOIN_RATE;
-
 CREATE TABLE CURRENCY(
     CODE VARCHAR(3) NOT NULL PRIMARY KEY,
     SYMBOL VARCHAR(50) NOT NULL,
@@ -19,5 +16,3 @@ ALTER TABLE BITCOIN_RATE ADD PRIMARY KEY (UPDATE_TIME, CODE);
 INSERT INTO CURRENCY VALUES('USD', '美金', 'United States Dollar', '&#36;');
 INSERT INTO CURRENCY VALUES('GBP', '英鎊', 'British Pound Sterling', '&pound;');
 INSERT INTO CURRENCY VALUES('EUR', '歐元', 'Euro', '&euro;');
-
-SELECT c.code, c.symbol, c.description, c.currency_name, b.rate, b.format_date FROM CURRENCY c JOIN BITCOIN_RATE b on c.code = b.code;

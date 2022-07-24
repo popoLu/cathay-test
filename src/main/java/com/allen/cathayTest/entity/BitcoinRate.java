@@ -20,16 +20,17 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "BITCOIN_RATE")
-public class BitcoinRate implements Serializable{
+public class BitCoinRate implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@Column(name = "UPDATE_TIME")
-	private Date updateTime;
-	@Id
 	@Column(name = "CODE")
 	private String code;
+	@Column(name = "UPDATE_TIME")
+	private Date updateTime;
+	@Column(name = "FORMAT_DATE")
+	private String formatDate;
 	@Column(name = "RATE")
 	private BigDecimal rate;
 }
