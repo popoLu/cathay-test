@@ -68,4 +68,10 @@ public class MethodTest {
 		System.out.println(updateList);
 	}
 	
+	@Test
+	void getCurrencyInfoList() {
+		ResponseEntity<String> list = bitCoinRateController.getCurrencyInfoList();
+		System.out.println(list);
+	}
+	
 }

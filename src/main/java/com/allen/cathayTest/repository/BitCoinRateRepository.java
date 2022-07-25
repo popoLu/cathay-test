@@ -11,6 +11,6 @@ import com.allen.cathayTest.entity.BitCoinRate;
 @Repository
 public interface BitCoinRateRepository extends JpaRepository<BitCoinRate, String> {
 
-	@Query(value = "SELECT c.code, c.symbol, c.description, c.currency_name, b.rate, b.format_date FROM CURRENCY c JOIN BITCOIN_RATE b on c.code = b.code", nativeQuery = true)
+	@Query(value = "SELECT c.code, c.symbol, c.description, c.currency_name, b.rate, b.format_date, ROW_NUMBER() Over (PARTITION BY c.code ORDER BY b.format_date DESC) sort FROM CURRENCY c JOIN BITCOIN_RATE b on c.code = b.code", nativeQuery = true)
 	List<?> getCurrencyInfo();
 }
