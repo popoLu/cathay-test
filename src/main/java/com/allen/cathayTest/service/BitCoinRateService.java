@@ -44,9 +44,8 @@ public class BitCoinRateService {
 		    	String key = keys.next();
 		    	JSONObject innerObj = (JSONObject) bpiObj.get(key);
 		    	BitCoinRate bitCoinRate = new BitCoinRate();
-		    	Double rate = (Double) innerObj.get("rate_float");
 		    	bitCoinRate.setCode(innerObj.getString("code"));
-		    	bitCoinRate.setRate(BigDecimal.valueOf(rate));
+		    	bitCoinRate.setRate(BigDecimal.valueOf(innerObj.getDouble("rate_float")));
 		    	bitCoinRate.setUpdateTime(date);
 		    	bitCoinRate.setFormatDate(formatDate);
 		    	bitCoinRateRepository.save(bitCoinRate);
